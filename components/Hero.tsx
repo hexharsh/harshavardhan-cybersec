@@ -166,7 +166,7 @@ export default function Hero() {
               <FolderOpen className="w-4 h-4" />
               View Projects
             </button>
-            <a href="/Harshavardhan_P_Resume.pdf" download="Harshavardhan_P_Resume.pdf" className="btn-secondary flex items-center gap-2">
+            <a href="/HP_VAPT_Resume_2025.pdf" download="Harshavardhan_P_VAPT_Resume_2025.pdf" className="btn-secondary flex items-center gap-2">
               <Download className="w-4 h-4" />
               Download Resume
             </a>
