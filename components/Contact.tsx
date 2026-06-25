@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, Linkedin, Github, Phone, MapPin, Send, Lock, CheckCircle } from "lucide-react";
+import { Mail, Linkedin, Globe, Phone, MapPin, Send, Lock, CheckCircle } from "lucide-react";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -39,18 +39,25 @@ export default function Contact() {
       color: "cyan",
     },
     {
+      icon: Globe,
+      label: "Portfolio",
+      value: "harshavardhan-cybersec.vercel.app",
+      href: "https://harshavardhan-cybersec.vercel.app",
+      color: "blue",
+    },
+    {
       icon: Phone,
       label: "Phone",
       value: "+91 9666730668",
       href: "tel:+919666730668",
-      color: "blue",
+      color: "green",
     },
     {
       icon: MapPin,
       label: "Location",
       value: "Bangalore, Karnataka",
       href: "#",
-      color: "green",
+      color: "cyan",
     },
   ];
 
