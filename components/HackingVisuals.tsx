@@ -84,6 +84,7 @@ export default function HackingVisuals() {
     let pingTimer = 0;
 
     function spawnPing() {
+      if (!canvas) return;
       pings.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
