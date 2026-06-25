@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import dynamic from "next/dynamic";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
@@ -20,6 +21,10 @@ const MatrixRain = dynamic(() => import("@/components/MatrixRain"), { ssr: false
 const ParticleNetwork = dynamic(() => import("@/components/ParticleNetwork"), { ssr: false });
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="relative min-h-screen bg-[#050505]">
       {/* Background effects */}
