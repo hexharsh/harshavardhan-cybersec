@@ -19,6 +19,7 @@ import Footer from "@/components/Footer";
 const MatrixRain = dynamic(() => import("@/components/MatrixRain"), { ssr: false });
 const ParticleNetwork = dynamic(() => import("@/components/ParticleNetwork"), { ssr: false });
 const HackingVisuals = dynamic(() => import("@/components/HackingVisuals"), { ssr: false });
+const WorldMap = dynamic(() => import("@/components/WorldMap"), { ssr: false });
 
 export default function Home() {
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function Home() {
       <MatrixRain />
       <ParticleNetwork />
       <HackingVisuals />
+      <WorldMap />
 
       {/* Navigation */}
       <Navigation />
