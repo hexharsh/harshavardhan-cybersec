@@ -107,7 +107,7 @@ export default function About() {
                 <div><span className="text-[#00E5FF]">"role"</span>: <span className="text-[#00FF88]">"Associate Consultant @ KPMG India"</span>,</div>
                 <div><span className="text-[#00E5FF]">"location"</span>: <span className="text-[#00FF88]">"Bangalore, Karnataka"</span>,</div>
                 <div><span className="text-[#00E5FF]">"specialization"</span>: <span className="text-[#00FF88]">"VAPT"</span>,</div>
-                <div><span className="text-[#00E5FF]">"certifications"</span>: [<span className="text-[#00FF88]">"CEH Trained"</span>, <span className="text-[#00FF88]">"Ethical Hacker"</span>],</div>
+                <div><span className="text-[#00E5FF]">"certifications"</span>: [<span className="text-[#00FF88]">"CEH"</span>],</div>
                 <div><span className="text-[#00E5FF]">"threat_model"</span>: <span className="text-[#00FF88]">"Think like an attacker"</span>,</div>
                 <div><span className="text-[#00E5FF]">"status"</span>: <span className="text-[#00FF88]">"Open to opportunities"</span></div>
               </div>
@@ -116,18 +116,20 @@ export default function About() {
             <p className="text-gray-400 text-sm leading-relaxed mb-4">
               Associate Consultant at KPMG India with 5+ years of hands-on VAPT
               expertise. Previously a Security Analyst at Deutsche Bank (2021–2025),
-              where I conducted end-to-end testing across 20+ web apps, APIs, and
-              mobile environments — improving coverage by 30% and cutting turnaround
-              time by 20%.
+              where I conducted end-to-end testing across web apps, APIs, and
+              mobile environments — delivering consistent vulnerability findings and
+              actionable remediation reports across multiple enterprise engagements.
             </p>
             <p className="text-gray-400 text-sm leading-relaxed">
-              My work spans cryptographic assessments, secure code reviews, Android mobile app
-              analysis, DAST with Veracode & AppScan, Qualys VMDR-based vulnerability management,
-              and agentic AI integration for security automation.
+              At KPMG India, my primary focus is Web Application VAPT — manually testing
+              enterprise applications for OWASP Top 10 vulnerabilities, business logic flaws,
+              authentication bypasses, and injection attacks. I also independently manage the
+              Qualys VMDR program, driving risk-based prioritization and remediation closure
+              across the organization.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">
-              {["OWASP Top 10", "CEH Trained", "CVSS", "DAST/SAST", "Veracode", "Burp Suite Pro"].map((tag) => (
+              {["OWASP Top 10", "CEH", "CVSS", "SAST/DAST", "Web Security", "Vuln Management", "Burp Suite Pro"].map((tag) => (
                 <span key={tag} className="cyber-tag">{tag}</span>
               ))}
             </div>

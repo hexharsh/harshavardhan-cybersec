@@ -16,7 +16,16 @@ export default function Contact() {
     await new Promise((r) => setTimeout(r, 1200));
     setEncrypting(false);
     setSending(true);
-    await new Promise((r) => setTimeout(r, 1000));
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed");
+    } catch {
+      // fail silently — still show success UI to avoid spam intel
+    }
     setSending(false);
     setSent(true);
     setForm({ name: "", email: "", subject: "", message: "" });
