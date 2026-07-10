@@ -225,18 +225,18 @@ export default function TerminalSection() {
             </div>
           </div>
 
-          {/* Terminal output */}
+          {/* Terminal output — scrollable, input is NOT inside here */}
           <div
             ref={outputRef}
-            className="p-5 h-80 overflow-y-auto font-mono text-xs space-y-0.5"
-            onClick={() => inputRef.current?.focus()}
+            className="p-5 h-72 overflow-y-auto font-mono text-xs space-y-0.5"
+            onClick={() => inputRef.current?.focus({ preventScroll: true })}
             style={{ scrollbarWidth: "none" }}
           >
             {/* Welcome banner */}
             <div className="text-[#00FF88] mb-3">
               <div>╔══════════════════════════════════════════════════╗</div>
-              <div>║  HARSHAVARDHAN P — SECURITY ANALYST @ DB        ║</div>
-              <div>║  Version 2.4.1 | Build: 20241201 | SECURE       ║</div>
+              <div>║  HARSHAVARDHAN P — ASSOCIATE CONSULTANT @ KPMG  ║</div>
+              <div>║  Version 2.4.1 | Build: 20250101 | SECURE       ║</div>
               <div>╚══════════════════════════════════════════════════╝</div>
             </div>
 
@@ -255,21 +255,24 @@ export default function TerminalSection() {
                 {entry.text}
               </div>
             ))}
+          </div>
 
-            {/* Input line */}
-            <div className="flex items-center gap-1 mt-2">
-              <span className="text-[#00FF88]">harsha@kali:~$</span>
-              <input
-                ref={inputRef}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                className="flex-1 bg-transparent outline-none text-gray-300 font-mono text-xs ml-1"
-                autoComplete="off"
-                spellCheck={false}
-              />
-              <span className="terminal-cursor" />
-            </div>
+          {/* Input line — fixed outside scroll area so page never jumps */}
+          <div
+            className="px-5 py-3 border-t border-[rgba(0,255,136,0.1)] flex items-center gap-1 font-mono text-xs cursor-text"
+            onClick={() => inputRef.current?.focus({ preventScroll: true })}
+          >
+            <span className="text-[#00FF88]">harsha@kali:~$</span>
+            <input
+              ref={inputRef}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              className="flex-1 bg-transparent outline-none text-gray-300 font-mono text-xs ml-1"
+              autoComplete="off"
+              spellCheck={false}
+            />
+            <span className="terminal-cursor" />
           </div>
 
           {/* Quick commands */}
