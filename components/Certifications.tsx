@@ -32,6 +32,15 @@ const certs = [
     skills: ["MS Sentinel", "Defender", "Threat Detection", "Incident Response"],
   },
   {
+    name: "ISO 42001",
+    full: "AI Management System Lead Implementer",
+    issuer: "KPMG — Lead Implementer Training",
+    icon: GraduationCap,
+    color: "cyan",
+    desc: "ISO/IEC 42001 Lead Implementer training covering AI governance, risk management, and responsible AI deployment frameworks for enterprise environments.",
+    skills: ["AI Governance", "Risk Management", "ISO 42001", "AI Ethics"],
+  },
+  {
     name: "VAPT",
     full: "Vulnerability Assessment & Penetration Testing",
     issuer: "Trained Security Tester",
