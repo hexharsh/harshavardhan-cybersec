@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Experience", href: "#experience" },
   { label: "AI & Auto", href: "#ai-initiatives" },
   { label: "Skills", href: "#skills" },
-  { label: "Dashboard", href: "#dashboard" },
   { label: "Projects", href: "#projects" },
   { label: "Terminal", href: "#terminal" },
   { label: "Contact", href: "#contact" },

@@ -68,8 +68,8 @@ const projects = [
     color: "cyan",
     category: "Red Teaming",
     description:
-      "Full-scope red team engagement simulating APT tactics. Multi-stage attack chain including phishing, initial access, C2 setup, persistence, and data exfiltration simulation.",
-    tech: ["Cobalt Strike", "Metasploit", "Custom Python", "OSINT tools"],
+      "Adversarial simulation engagement testing detection and response capabilities. Multi-stage attack chain including OSINT, initial access, persistence, lateral movement, and data exfiltration simulation.",
+    tech: ["Metasploit", "Custom Python", "OSINT Tools", "BloodHound"],
     methodology: "MITRE ATT&CK Enterprise, Cyber Kill Chain",
     impact: "Exposed gaps in detection and IR capabilities",
     owasp: ["Initial Access", "Persistence", "Defense Evasion", "Exfiltration"],

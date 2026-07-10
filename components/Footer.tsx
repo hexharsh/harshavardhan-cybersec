@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, CheckCircle, Activity } from "lucide-react";
+import { Shield } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function Footer() {
@@ -18,30 +18,22 @@ export default function Footer() {
       <div className="absolute inset-0 cyber-grid-bg opacity-10" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-        {/* System status panel */}
+        {/* Quick links */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="glass neon-border-green rounded-xl p-6 mb-8"
         >
-          <div className="font-mono text-xs text-[#00FF88] mb-4">
-            &gt; System Status
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
-              { label: "Firewall", value: "ACTIVE", icon: Shield },
-              { label: "Monitoring", value: "THREATS: SCANNING", icon: Activity },
-              { label: "Security Level", value: "MAXIMUM", icon: CheckCircle },
-              { label: "Last Scan", value: "COMPLETED ✓", icon: CheckCircle },
-            ].map((item) => (
-              <div key={item.label} className="flex items-center gap-3">
-                <item.icon className="w-4 h-4 text-[#00FF88] flex-shrink-0" />
-                <div>
-                  <div className="text-[10px] font-mono text-gray-600">{item.label}</div>
-                  <div className="text-xs font-mono text-[#00FF88]">{item.value}</div>
-                </div>
-              </div>
+          <div className="flex flex-wrap justify-center gap-6 text-xs font-mono text-gray-400">
+            {["About", "Experience", "Skills", "Projects", "Certifications", "Contact"].map((label) => (
+              <button
+                key={label}
+                onClick={() => document.querySelector(`#${label.toLowerCase()}`)?.scrollIntoView({ behavior: "smooth" })}
+                className="hover:text-[#00FF88] transition-colors"
+              >
+                {label}
+              </button>
             ))}
           </div>
         </motion.div>

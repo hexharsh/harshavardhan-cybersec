@@ -8,7 +8,6 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import AiInitiatives from "@/components/AiInitiatives";
 import Skills from "@/components/Skills";
-import Dashboard from "@/components/Dashboard";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
 import TerminalSection from "@/components/TerminalSection";
@@ -42,7 +41,6 @@ export default function Home() {
       <Experience />
       <AiInitiatives />
       <Skills />
-      <Dashboard />
       <Projects />
       <Certifications />
       <TerminalSection />

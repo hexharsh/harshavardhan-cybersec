@@ -62,9 +62,9 @@ const commands: Record<string, string[]> = {
     "  [Jan 2021 — Nov 2025]  Deutsche Bank",
     "  Role: Security Analyst",
     "  Focus: VAPT, DAST, Secure Code Review",
-    "  - Tested 20+ web apps, APIs & mobile apps",
-    "  - Improved testing coverage by 30%",
-    "  - Reduced vuln turnaround time by 20%",
+    "  - Web app, API & mobile security testing",
+    "  - OWASP Top 10, BOLA, Auth bypass, IDOR",
+    "  - VAPT reports & remediation advisory",
     "",
     "  Education:",
     "  - MBA, Sri Krishnadevaraya University (2020)",
@@ -235,8 +235,8 @@ export default function TerminalSection() {
             {/* Welcome banner */}
             <div className="text-[#00FF88] mb-3">
               <div>╔══════════════════════════════════════════════════╗</div>
-              <div>║  HARSHAVARDHAN P — ASSOCIATE CONSULTANT @ KPMG  ║</div>
-              <div>║  Version 2.4.1 | Build: 20250101 | SECURE       ║</div>
+              <div>║  HARSHAVARDHAN P — ASSOC. CONSULTANT @ KPMG     ║</div>
+              <div>║  Version 2.4.1 | Build: 20260101 | SECURE       ║</div>
               <div>╚══════════════════════════════════════════════════╝</div>
             </div>
 
