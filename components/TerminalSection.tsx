@@ -166,6 +166,7 @@ export default function TerminalSection() {
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter") {
+      e.preventDefault();
       handleCommand(input);
     } else if (e.key === "ArrowUp") {
       e.preventDefault();
