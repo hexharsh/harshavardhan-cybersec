@@ -20,7 +20,7 @@ export async function POST(req: NextRequest) {
     from: `"Portfolio Contact" <${process.env.GMAIL_USER}>`,
     to: "paliviriharshavardhan1998@gmail.com",
     replyTo: email,
-    subject: `[Portfolio] ${subject}`,
+    subject: `[New Inquiry] Security Consultation — Harshavardhan P | ${subject}`,
     html: `
       <div style="font-family:monospace;background:#050505;color:#00FF88;padding:24px;border-radius:8px;border:1px solid #00FF88">
         <h2 style="color:#00FF88;margin-top:0">New Contact — Portfolio</h2>
