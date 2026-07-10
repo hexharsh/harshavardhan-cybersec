@@ -107,7 +107,7 @@ export default function About() {
                 <div><span className="text-[#00E5FF]">"role"</span>: <span className="text-[#00FF88]">"Associate Consultant @ KPMG India"</span>,</div>
                 <div><span className="text-[#00E5FF]">"location"</span>: <span className="text-[#00FF88]">"Bangalore, Karnataka"</span>,</div>
                 <div><span className="text-[#00E5FF]">"specialization"</span>: <span className="text-[#00FF88]">"VAPT"</span>,</div>
-                <div><span className="text-[#00E5FF]">"certifications"</span>: [<span className="text-[#00FF88]">"CEH"</span>],</div>
+                <div><span className="text-[#00E5FF]">"certifications"</span>: [<span className="text-[#00FF88]">"CEH"</span>, <span className="text-[#00FF88]">"AZ-500"</span>, <span className="text-[#00FF88]">"SC-200"</span>],</div>
                 <div><span className="text-[#00E5FF]">"threat_model"</span>: <span className="text-[#00FF88]">"Think like an attacker"</span>,</div>
                 <div><span className="text-[#00E5FF]">"status"</span>: <span className="text-[#00FF88]">"Open to opportunities"</span></div>
               </div>
