@@ -23,7 +23,7 @@ const subtitles = [
   "Web Application VAPT Specialist",
   "Vulnerability Management — Qualys VMDR",
   "Web • API • Mobile • Network Pentesting",
-  "CEH Trained | Ethical Hacker",
+  "CEH | Ethical Hacker",
   "OWASP Top 10 | CVSS | Risk-Based Remediation",
 ];
 
