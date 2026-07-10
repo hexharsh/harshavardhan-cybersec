@@ -7,9 +7,9 @@ import { Shield, Globe, Smartphone, Network, Code2, Search, FileCheck, AlertTria
 const stats = [
   { value: 5, suffix: "+", label: "Years Experience", color: "green" },
   { value: 500, suffix: "+", label: "Vulnerabilities Assessed", color: "cyan" },
-  { value: 100, suffix: "+", label: "Applications Tested", color: "blue" },
+  { value: 50, suffix: "+", label: "Applications Tested", color: "blue" },
   { value: 50, suffix: "+", label: "Critical Findings", color: "green" },
-  { value: 20, suffix: "+", label: "Enterprise Engagements", color: "cyan" },
+  { value: 15, suffix: "+", label: "Enterprise Engagements", color: "cyan" },
 ];
 
 const expertise = [
