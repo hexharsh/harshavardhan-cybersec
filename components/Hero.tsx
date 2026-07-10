@@ -147,7 +147,7 @@ export default function Hero() {
             transition={{ delay: 1.1 }}
             className="flex flex-wrap gap-2 mb-10"
           >
-            {["CEH", "CPENT", "OWASP Top 10", "Qualys VMDR", "Burp Suite Pro", "API Security", "VAPT", "Kali Linux"].map((tag) => (
+            {["CEH", "CPENT", "OWASP Top 10", "Qualys VMDR", "Burp Suite Pro", "API Security", "VAPT", "Web App Security", "Network Security", "Kali Linux"].map((tag) => (
               <span key={tag} className="cyber-tag">{tag}</span>
             ))}
           </motion.div>
