@@ -147,7 +147,7 @@ export default function Hero() {
             transition={{ delay: 1.1 }}
             className="flex flex-wrap gap-2 mb-10"
           >
-            {["CEH Trained", "OWASP", "KPMG India", "Qualys VMDR", "Burp Suite Pro", "Kali Linux", "VAPT", "Vuln Management"].map((tag) => (
+            {["CEH", "CPENT", "OWASP Top 10", "Qualys VMDR", "Burp Suite Pro", "API Security", "VAPT", "Kali Linux"].map((tag) => (
               <span key={tag} className="cyber-tag">{tag}</span>
             ))}
           </motion.div>
@@ -160,7 +160,7 @@ export default function Hero() {
             className="flex flex-wrap gap-4"
           >
             <button
-              onClick={() => scrollToSection("#projects")}
+              onClick={(e) => { (e.currentTarget as HTMLButtonElement).blur(); scrollToSection("#projects"); }}
               className="btn-primary flex items-center gap-2"
             >
               <FolderOpen className="w-4 h-4" />
@@ -171,7 +171,7 @@ export default function Hero() {
               Download Resume
             </a>
             <button
-              onClick={() => scrollToSection("#contact")}
+              onClick={(e) => { (e.currentTarget as HTMLButtonElement).blur(); scrollToSection("#contact"); }}
               className="btn-secondary flex items-center gap-2 border-[rgba(59,130,246,0.4)] text-[#3B82F6]"
             >
               <Mail className="w-4 h-4" />
