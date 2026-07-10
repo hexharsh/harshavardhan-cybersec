@@ -123,10 +123,12 @@ export default function TerminalSection() {
   const [cmdHistory, setCmdHistory] = useState<string[]>([]);
   const [historyIdx, setHistoryIdx] = useState(-1);
   const inputRef = useRef<HTMLInputElement>(null);
-  const bottomRef = useRef<HTMLDivElement>(null);
+  const outputRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (outputRef.current) {
+      outputRef.current.scrollTop = outputRef.current.scrollHeight;
+    }
   }, [history]);
 
   const handleCommand = (cmd: string) => {
@@ -224,6 +226,7 @@ export default function TerminalSection() {
 
           {/* Terminal output */}
           <div
+            ref={outputRef}
             className="p-5 h-80 overflow-y-auto font-mono text-xs space-y-0.5"
             onClick={() => inputRef.current?.focus()}
             style={{ scrollbarWidth: "none" }}
@@ -266,7 +269,6 @@ export default function TerminalSection() {
               />
               <span className="terminal-cursor" />
             </div>
-            <div ref={bottomRef} />
           </div>
 
           {/* Quick commands */}
