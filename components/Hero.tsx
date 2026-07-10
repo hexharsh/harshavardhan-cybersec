@@ -189,8 +189,8 @@ export default function Hero() {
             {[
               { value: "5+", label: "Years" },
               { value: "500+", label: "Vulns" },
-              { value: "100+", label: "Apps" },
-              { value: "50+", label: "Reports" },
+              { value: "50+", label: "Apps" },
+              { value: "15+", label: "Engagements" },
             ].map((stat) => (
               <div key={stat.label} className="text-center">
                 <div className="text-2xl font-black neon-text-green">{stat.value}</div>
