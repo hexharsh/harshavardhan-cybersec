@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe, Server, Smartphone, Network, Target, Cloud, ExternalLink, ChevronDown } from "lucide-react";
+import { Globe, Server, Smartphone, Network, Target, Brain, ChevronDown } from "lucide-react";
 
 const projects = [
   {
@@ -17,7 +17,6 @@ const projects = [
     methodology: "OWASP Testing Guide v4.2, PTES",
     impact: "Prevented potential data breach affecting 2M+ users",
     owasp: ["A01: Broken Access Control", "A02: Cryptographic Failures", "A03: Injection", "A07: Auth Failures"],
-    severity: { critical: 4, high: 8, medium: 11 },
   },
   {
     id: 2,
@@ -31,7 +30,6 @@ const projects = [
     methodology: "OWASP API Security Top 10",
     impact: "Identified mass assignment and BOLA vulnerabilities in production",
     owasp: ["API1: BOLA", "API2: Broken Auth", "API3: Excessive Data", "API6: Mass Assignment"],
-    severity: { critical: 2, high: 5, medium: 9 },
   },
   {
     id: 3,
@@ -45,7 +43,6 @@ const projects = [
     methodology: "OWASP MASVS, MSTG",
     impact: "Hardened mobile authentication and patched insecure data storage",
     owasp: ["M1: Credential Usage", "M2: Data Storage", "M5: Insufficient Crypto", "M6: Auth"],
-    severity: { critical: 3, high: 6, medium: 7 },
   },
   {
     id: 4,
@@ -59,7 +56,6 @@ const projects = [
     methodology: "PTES, MITRE ATT&CK",
     impact: "Exposed critical AD misconfigurations and Kerberoastable accounts",
     owasp: ["Privilege Escalation", "Lateral Movement", "Kerberoasting", "Pass-the-Hash"],
-    severity: { critical: 5, high: 9, medium: 12 },
   },
   {
     id: 5,
@@ -73,21 +69,19 @@ const projects = [
     methodology: "MITRE ATT&CK Enterprise, Cyber Kill Chain",
     impact: "Exposed gaps in detection and IR capabilities",
     owasp: ["Initial Access", "Persistence", "Defense Evasion", "Exfiltration"],
-    severity: { critical: 7, high: 11, medium: 8 },
   },
   {
     id: 6,
-    title: "Cloud Security Assessment",
-    icon: Cloud,
+    title: "AI / LLM Pentest",
+    icon: Brain,
     color: "blue",
-    category: "Cloud Security",
+    category: "AI Security",
     description:
-      "AWS and Azure security configuration review covering IAM misconfigurations, publicly exposed S3 buckets, overly permissive security groups, and serverless security gaps.",
-    tech: ["Prowler", "ScoutSuite", "Pacu", "AWS CLI", "Nmap"],
-    methodology: "CIS Benchmarks, CSA CCM, NIST CSF",
-    impact: "Discovered 3 publicly exposed S3 buckets with PII data",
-    owasp: ["IAM Misconfig", "Insecure Storage", "Excessive Permissions", "Missing Logging"],
-    severity: { critical: 3, high: 7, medium: 15 },
+      "Security assessment of an LLM-integrated application covering prompt injection, jailbreaking, insecure output handling, and indirect prompt injection via external data sources.",
+    tech: ["Burp Suite", "Python", "Custom Payloads", "OWASP LLM Top 10"],
+    methodology: "OWASP LLM Top 10, MITRE ATLAS",
+    impact: "Identified prompt injection vectors bypassing system-prompt guardrails",
+    owasp: ["LLM01: Prompt Injection", "LLM02: Insecure Output", "LLM06: Data Disclosure", "LLM09: Overreliance"],
   },
 ];
 
@@ -167,16 +161,6 @@ export default function Projects() {
                         <h3 className="text-white font-bold">{project.title}</h3>
                         <span className={`text-[11px] font-mono ${colors.icon}`}>
                           {project.category}
-                        </span>
-                      </div>
-                    </div>
-                    <div className="flex flex-col items-end gap-2">
-                      <div className="flex gap-2">
-                        <span className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-[rgba(239,68,68,0.15)] text-[#EF4444]">
-                          {project.severity.critical} CRIT
-                        </span>
-                        <span className="font-mono text-[9px] px-1.5 py-0.5 rounded bg-[rgba(245,158,11,0.15)] text-[#F59E0B]">
-                          {project.severity.high} HIGH
                         </span>
                       </div>
                     </div>
