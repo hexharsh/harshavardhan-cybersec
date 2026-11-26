@@ -217,9 +217,9 @@ export default function AiInitiatives() {
                   ].map((row, i) => (
                     <tr key={i} className="border-b border-[rgba(255,255,255,0.04)]">
                       <td className="text-gray-200 font-semibold py-2.5 pr-4 text-[10px]">{row.agent}</td>
-                      <td className="text-gray-500 py-2.5 pr-4 text-[10px]">{row.manual}</td>
+                      <td className="text-gray-400 py-2.5 pr-4 text-[10px]">{row.manual}</td>
                       <td className="text-[#00FF88] font-semibold py-2.5 pr-4 text-[10px]">{row.draft}</td>
-                      <td className="text-gray-600 py-2.5 text-[10px] leading-relaxed">{row.value}</td>
+                      <td className="text-gray-300 py-2.5 text-[10px] leading-relaxed">{row.value}</td>
                     </tr>
                   ))}
                 </tbody>
