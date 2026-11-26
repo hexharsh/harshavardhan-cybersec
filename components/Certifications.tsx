@@ -145,6 +145,66 @@ export default function Certifications() {
             );
           })}
         </div>
+        {/* Learning Paths */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.1 }}
+          className="mb-12"
+        >
+          <p className="section-label mb-6 text-center">// LEARNING_PATHS.completed</p>
+          <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            {[
+              {
+                name: "Pre Security",
+                issuer: "TryHackMe",
+                color: "green" as const,
+                desc: "Foundational cybersecurity concepts covering networking, web fundamentals, and Linux basics — the prerequisite pathway for hands-on offensive security.",
+                skills: ["Networking", "Linux", "Web Fundamentals", "Recon"],
+              },
+              {
+                name: "Cyber Security 101",
+                issuer: "TryHackMe",
+                color: "cyan" as const,
+                desc: "Core cybersecurity principles covering attack surfaces, defensive concepts, cryptography, and practical hands-on labs across offensive and defensive domains.",
+                skills: ["Attack Surfaces", "Cryptography", "Defensive Concepts", "Practical Labs"],
+              },
+            ].map((path, i) => {
+              const colors = colorMap[path.color];
+              return (
+                <motion.div
+                  key={path.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`glass rounded-xl p-5 border ${colors.border} ${colors.glow} transition-all duration-300`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${colors.iconBg}`}>
+                      <BookOpen className={`w-5 h-5 ${colors.icon}`} />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-0.5">
+                        <h3 className="text-white font-bold text-sm">{path.name}</h3>
+                        <CheckCircle className={`w-3.5 h-3.5 ${colors.icon} flex-shrink-0`} />
+                      </div>
+                      <p className={`font-mono text-[10px] mb-2 ${colors.badge}`}>{path.issuer}</p>
+                      <p className="text-gray-500 text-xs leading-relaxed mb-3">{path.desc}</p>
+                      <div className="flex flex-wrap gap-1">
+                        {path.skills.map((s) => (
+                          <span key={s} className={`${colors.tag} text-[9px]`}>{s}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </motion.div>
+
         {/* Education */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
